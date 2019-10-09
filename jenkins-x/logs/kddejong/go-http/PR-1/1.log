@@ -1,0 +1,142 @@
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-drsx5[0m
+{"level":"warn","ts":1570654591.7048945,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1570654591.7085104,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-2946h[0m
+{"level":"warn","ts":1570654592.1749365,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1570654592.1760983,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-kddejong-go-http-pr-1-serv-t6q98[0m
+{"level":"warn","ts":1570654598.2419786,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1570654598.6954215,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/go-http.git @ bc23d096674f6b3a7ae1d808e9139cafb325de5c in path /workspace/source"}
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:bc23d096674f6b3a7ae1d808e9139cafb325de5c,1:c979a85e1d03b34a91966327a1294f815a0b2bb0
+DEBUG: ran git fetch --unshallow origin c979a85e1d03b34a91966327a1294f815a0b2bb0: bc23d096674f6b3a7ae1d808e9139cafb325de5c: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard bc23d096674f6b3a7ae1d808e9139cafb325de5c in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge c979a85e1d03b34a91966327a1294f815a0b2bb0 in 
+Merged SHA c979a85e1d03b34a91966327a1294f815a0b2bb0 with commit message 'Test update' into base branch master
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+DEBUG: ran git fetch origin c979a85e1d03b34a91966327a1294f815a0b2bb0: bc23d096674f6b3a7ae1d808e9139cafb325de5c: in 
+DEBUG: Unshallowed git repo in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard bc23d096674f6b3a7ae1d808e9139cafb325de5c in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge c979a85e1d03b34a91966327a1294f815a0b2bb0 in 
+Merged SHA c979a85e1d03b34a91966327a1294f815a0b2bb0 with commit message 'Test update' into base branch master
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-serverless-jenkins-effective.yml
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+WARNING: failed to find secret kaniko-secret in namespace **: secrets "kaniko-secret" not found
+PipelineActivity for ********-go-http-PR-1-1
+Applying changes 
+upserted PipelineResource ********-go-http-pr-1-serverles for the git repository https://github.com/********/go-http.git
+upserted Task ********-go-http-pr-1-serverles-from-build-pack-1
+upserted Pipeline ********-go-http-pr-1-serverles-1
+created PipelineRun ********-go-http-pr-1-serverles-1
+created PipelineStructure ********-go-http-pr-1-serverles-1
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-88phh[0m
+{"level":"warn","ts":1570654611.8077168,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1570654611.808026,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-6tcq9[0m
+{"level":"warn","ts":1570654614.7872922,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1570654614.7889287,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/preview\""}
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-kddejong-go-http-pr-1-serverles-bd8n6[0m
+{"level":"warn","ts":1570654741.9782724,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1570654742.831841,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/go-http.git @ master in path /workspace/source"}
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:bc23d096674f6b3a7ae1d808e9139cafb325de5c,1:c979a85e1d03b34a91966327a1294f815a0b2bb0
+DEBUG: ran git fetch --unshallow origin c979a85e1d03b34a91966327a1294f815a0b2bb0: bc23d096674f6b3a7ae1d808e9139cafb325de5c: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard bc23d096674f6b3a7ae1d808e9139cafb325de5c in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge c979a85e1d03b34a91966327a1294f815a0b2bb0 in 
+Merged SHA c979a85e1d03b34a91966327a1294f815a0b2bb0 with commit message 'Test update' into base branch master
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-linux[0m
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/go-http main.go
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/go-http"]                      
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+2019/10/09 20:59:12 pushed blob: sha256:cf58e913188d4b3df15b046b35730d8fbaa63faf87cc4647f43286d092a02e28
+2019/10/09 20:59:12 pushed blob: sha256:64aadcd95ae5152ae3d86d5a48891260530195133824617ec0f1e67015805ad8
+2019/10/09 20:59:12 837619682825.dkr.ecr.us-west-2.amazonaws.com/********/go-http:0.0.0-SNAPSHOT-PR-1-1: digest: sha256:47bfa95496ab003eae3f184a4f8ce490c260596e7c1b81d207138ed3dab6a6ca size: 428
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: 837619682825.dkr.ecr.us-west-2.amazonaws.com\/********\/go-http|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-1-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-1-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Read credentials for https://storage.googleapis.com/chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Read credentials for http://jenkins-x-chartmuseum:8080 from vault helm/repos
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Read credentials for http://chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mkddejong-go-http-pr-1-serverles-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Commit author email is empty for: c979a85e1d03b34a91966327a1294f815a0b2bb0
+Looking for commits in: /workspace/source/
+Found commit author match for: ******** with email address: ********@amazon.com
+Created environment ********-go-http-pr-1
+Namespace **-********-go-http-pr-1 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: jenkins-x.dejong.ninja
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: 837619682825.dkr.ecr.us-west-2.amazonaws.com/********/go-http
+    tag: 0.0.0-SNAPSHOT-PR-1-1
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+
+
+Updating PipelineActivities ********-go-http-pr-1-1 which has status Running
+WARNING: preview application http://go-http.**-********-go-http-pr-1.jenkins-x.dejong.ninja not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.330533919s
+Preview application is now available at: http://go-http.**-********-go-http-pr-1.jenkins-x.dejong.ninja
