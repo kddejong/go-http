@@ -1,0 +1,127 @@
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-555wj[0m
+{"level":"warn","ts":1570658605.2260177,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1570658605.2263365,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-79h8m[0m
+{"level":"warn","ts":1570658606.4619193,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1570658606.464781,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-kddejong-go-http-master-re-znbzr[0m
+{"level":"warn","ts":1570658612.540872,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1570658612.9930835,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/go-http.git @ 3ecf012749c5c699bae141ee5250a76e67134a37 in path /workspace/source"}
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:3ecf012749c5c699bae141ee5250a76e67134a37
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-release-effective.yml
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: echo \$(**-release-version) > VERSION
+
+running command: ** step tag --version \$(cat VERSION)
+Updating chart version in charts/go-http/Chart.yaml to 0.0.2
+Updating repository in charts/go-http/values.yaml to 837619682825.dkr.ecr.us-west-2.amazonaws.com/********/go-http
+Updating tag in charts/go-http/values.yaml to 0.0.2
+Tag v0.0.2 created and pushed to remote origin
+
+WARNING: failed to find secret kaniko-secret in namespace **: secrets "kaniko-secret" not found
+PipelineActivity for ********-go-http-master-2
+Applying changes 
+upserted PipelineResource ********-go-http-master-release for the git repository https://github.com/********/go-http.git
+upserted Task ********-go-http-master-release-from-build-pack-2
+upserted Pipeline ********-go-http-master-release-2
+created PipelineRun ********-go-http-master-release-2
+created PipelineStructure ********-go-http-master-release-2
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-747sg[0m
+{"level":"warn","ts":1570658623.1739545,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1570658623.1757846,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-vqcf9[0m
+{"level":"warn","ts":1570658624.4294841,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1570658624.435459,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/go-http\""}
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-kddejong-go-http-master-release-j5xg5[0m
+{"level":"warn","ts":1570658628.4849021,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1570658628.9504898,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/go-http.git @ v0.0.2 in path /workspace/source"}
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:3ecf012749c5c699bae141ee5250a76e67134a37
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/go-http main.go
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/go-http"]                      
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+2019/10/09 22:03:56 pushed blob: sha256:a0346e9c86235a5eac871c37d09295a395101ae80b66109069f181379f79ec5c
+2019/10/09 22:03:56 pushed blob: sha256:1e0d9ede4f292d8502dba1b7d282415424522849baa7c421ce1ee401461d0e07
+2019/10/09 22:03:57 837619682825.dkr.ecr.us-west-2.amazonaws.com/********/go-http:0.0.2: digest: sha256:3274183265cb5c891d18926c76cf19f117b2c27922b0e4176ed4846d53ed42bc size: 428
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/go-http to an unshallow repository
+Generating change log from git ref b37c2696ffdf0dc68e318d1b8adb15603186a583 => 2d37607003a0ae3b47b5eadfac7d27965008ce25
+Associating user ******** in users.jenkins.io with email ********@amazon.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user ******** in users.jenkins.io
+WARNING: Failed to enrich commit c979a85e1d03b34a91966327a1294f815a0b2bb0 with issues: User.jenkins.io "********" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user ******** in users.jenkins.io with email ********@amazon.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user ******** in users.jenkins.io
+WARNING: Failed to enrich commit c979a85e1d03b34a91966327a1294f815a0b2bb0 with issues: User.jenkins.io "********" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for ********/go-http and tag v0.0.2 so creating a new release
+Updated the release information at https://github.com/********/go-http/releases/tag/v0.0.2
+generated: /workspace/source/charts/go-http/templates/release.yaml
+Created Release go-http-0-0-2 resource in namespace **
+Updating PipelineActivity ********-go-http-master-2 with version 0.0.2
+Updated PipelineActivities ********-go-http-master-2 with release notes URL: https://github.com/********/go-http/releases/tag/v0.0.2
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Read credentials for https://storage.googleapis.com/chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Read credentials for http://jenkins-x-chartmuseum:8080 from vault helm/repos
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file go-http-0.0.2.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mkddejong-go-http-master-release-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+Promoting app go-http version 0.0.2 to namespace **-staging
+Created Pull Request: https://github.com/********/environment-pighorse-staging/pull/2
+Pull Request https://github.com/********/environment-pighorse-staging/pull/2 is merged at sha 201f85df99bd328ecb3b845247c4b2ab2fa9bb68
+Pull Request merged but we are not waiting for the update pipeline to complete!
